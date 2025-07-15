@@ -1,0 +1,94 @@
+defaults:
+  - Pipeline: default
+  - _self_
+
+hydra:
+  searchpath:
+    - pkg://kazu.conf
+
+# Define step configurations
+MemoryEfficientStringMatchingStep:
+  _target_: kazu.steps.joint_ner_and_linking.memory_efficient_string_matching.MemoryEfficientStringMatchingStep
+  parsers:
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/kazu_formatted_ontologies/doid_kazu.csv
+      entity_class: Disease
+      name: DOID
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/cso.csv
+      entity_class: CSO
+      name: CSO
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/dc.csv
+      entity_class: DC
+      name: DC
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/efo.csv
+      entity_class: EFO
+      name: EFO
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/hp.csv
+      entity_class: HP
+      name: HP
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/obi.csv
+      entity_class: OBI
+      name: OBI
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/obcs.csv
+      entity_class: OBCS
+      name: OBCS
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/provo.csv
+      entity_class: PROVO
+      name: PROVO
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/sepio.csv
+      entity_class: SEPIO
+      name: SEPIO
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      in_path: data/tabular_ontologies/loinc.csv
+      entity_class: LOINC
+      name: LOINC
+
+TransformersModelForTokenClassificationNerStep:
+  _target_: kazu.steps.ner.hf_token_classification.TransformersModelForTokenClassificationNerStep
+  path: data/huggingface_models/biobert
+
+DictionaryEntityLinkingStep:
+  _target_: kazu.steps.linking.dictionary.DictionaryEntityLinkingStep
+
+RulesBasedEntityClassDisambiguationFilterStep:
+  _target_: kazu.steps.linking.post_processing.rules_based_entity_class_disambiguation_filter.RulesBasedEntityClassDisambiguationFilterStep
+
+MappingStep:
+  _target_: kazu.steps.linking.post_processing.mapping_step.MappingStep
+
+AbbreviationFinderStep:
+  _target_: kazu.steps.other.abbreviation_finder.AbbreviationFinderStep
+
+CleanupStep:
+  _target_: kazu.steps.other.cleanup.CleanupStep
+  actions: [default]
+
+MergeOverlappingEntsStep:
+  _target_: kazu.steps.document_post_processing.merge_overlapping_entities.MergeOverlappingEntsStep
+
+# Define a minimal Pipeline configuration
+Pipeline:
+  _target_: kazu.pipeline.Pipeline
+  steps:
+    - _target_: kazu.ontology_preprocessing.parsers.TabularOntologyParser
+      name: DOID
+      path: ${oc.env:KAZU_MODEL_PACK}/ontologies/doid.tsv
+      entity_class: Disease
+      id_col: ID
+      name_col: Name
+      synonym_cols: [Synonyms]
+      id_prefix: DOID:
+      name_normalizer: simple
+      string_scorer: null
+      cache_dir: ${oc.env:KAZU_MODEL_PACK}/cache
+      cache_name: doid_cache
+      cache_version: 1.0
+      cache_force_rebuild: false 

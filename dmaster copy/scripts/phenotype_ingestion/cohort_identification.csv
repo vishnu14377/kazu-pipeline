@@ -1,0 +1,2 @@
+cohort_id,cohort_name,source_id,atlas_link,provenance_agent,provenance_source,provenance_timestamp
+10616,"Earliest event of Crohn's disease",5802,"https://epi.gsk.com/atlas/#/cohortdefinition/10616","PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z" 

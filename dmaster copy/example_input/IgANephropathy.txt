@@ -1,0 +1,96 @@
+IgA Nephropathy:
+ 
+# IgA Nephropathy Disease Definition
+ 
+## Step 1: Disease Overview
+ 
+### General Considerations
+
+- **Definition**: IgA nephropathy, also known as Berger's disease, is one of the most common chronic glomerulonephritides worldwide. It is characterized by the deposition of IgA antibodies in the glomeruli of the kidneys, leading to diverse clinical courses and associated with immunological abnormalities in IgA production [Pubmed: [9154653](http://www.ncbi.nlm.nih.gov/pubmed/9154653); PubMed: [30103519](http://www.ncbi.nlm.nih.gov/pubmed/30103519)].
+
+- **Pathogenesis**: It is defined as an autoimmune disease with a multihit pathogenetic process. This involves galactose-deficient immunoglobulin A1 (IgA1) being recognized by unique autoantibodies, leading to the formation of pathogenic immune complexes. These complexes deposit in the glomerular mesangium and induce renal injury [Pubmed: [23511518](http://www.ncbi.nlm.nih.gov/pubmed/23511518)].
+
+- **Affected Areas**: The primary area affected by IgA nephropathy is the kidneys, specifically the glomeruli.
+
+- **Severity**: The severity of IgA nephropathy can vary widely, ranging from mild to severe renal impairment, potentially leading to end-stage renal disease.
+
+- **Stages**: IgA nephropathy does not have distinct stages like cancer but can progress from mild to severe renal dysfunction over time.
+
+- **Molecular Mechanisms**: The disease involves the deposition of galactose-deficient IgA1 in the kidneys, which triggers an autoimmune response [Pubmed: [23511518](http://www.ncbi.nlm.nih.gov/pubmed/23511518)].
+
+- **Subtypes**: There are no distinct subtypes of IgA nephropathy, but it can present as primary or secondary due to other conditions like cirrhosis, celiac disease, vasculitis, and HIV [PubMed: [27596164](http://www.ncbi.nlm.nih.gov/pubmed/27596164)].
+
+- **Common Treatments**: Treatments include medications like ACE inhibitors, corticosteroids, and immunosuppressants to manage symptoms and slow progression. In severe cases, dialysis or kidney transplantation may be necessary.
+
+- **Health Economics**: IgA nephropathy can lead to significant healthcare costs due to chronic management and potential need for dialysis or transplantation.
+ 
+## Step 2: Disease Symptoms
+ 
+### General Considerations
+
+- **Key Signs, Symptoms, and Clinical Findings**: Hematuria (blood in urine), proteinuria (protein in urine), hypertension, and renal dysfunction are common symptoms.
+
+- **Relevant Laboratory Values and Diagnostic Tests**: Diagnosis is often confirmed through kidney biopsy showing IgA deposits. Blood tests may show elevated creatinine levels indicating renal impairment.
+
+- **Severity and Progression Stages**: Progression can be monitored through renal function tests and urine analysis for proteinuria and hematuria.
+
+- **Comorbidities and Differential Diagnoses**: Conditions like dermatitis herpetiformis, celiac disease, and systemic or immunologic disorders may coexist or mimic IgA nephropathy [PubMed: [25322921](http://www.ncbi.nlm.nih.gov/pubmed/25322921)].
+
+- **Demographic and Pathological Factors**: IgA nephropathy can affect individuals of any age but is more common in males and often diagnosed in young adults.
+ 
+## Step 3: Disease Definition
+ 
+### General Considerations
+
+- **Phenotype of Interest**: IgA nephropathy, characterized by IgA deposits in the glomeruli.
+
+- **Clinical Relevance and Research Objectives**: Understanding the autoimmune mechanisms and progression to develop targeted therapies.
+
+- **Clinical Presentations, Variations, and Subtypes**: Primary and secondary IgA nephropathy based on underlying conditions.
+
+- **Pathophysiology and Mechanisms**: Autoimmune response to galactose-deficient IgA1 leading to renal injury.
+ 
+### Specific Considerations
+
+- **Edge Diseases/Conditions**: Consideration of related conditions like Henoch-Schönlein purpura, which shares similar renal pathology [PubMed: [30103519](http://www.ncbi.nlm.nih.gov/pubmed/30103519)].
+
+- **Diagnostic Criteria**: Diagnosis primarily through kidney biopsy showing IgA deposits.
+
+- **Epidemiology**: Prevalence varies globally, with higher rates in Asian populations.
+ 
+## Step 3: Disease Code Lists
+ 
+### General Considerations
+
+- **Translate Clinical Concepts into Measurable Data Elements**: Map concepts to standardized codes.
+
+- **Integrate Multiple Data Sources**: Combine data from EHRs, claims, registries, etc.
+
+- **Regularly Update Coding Systems**: Stay current with code changes and updates.
+ 
+### Specific Considerations
+
+- **Diagnosis Codes**: 
+
+  - [IgA nephropathy: Mapped code system: ICD-10-CM (N02.8, N02.9)]
+
+- **Laboratory and Imaging Results**: 
+
+  - [IgA deposits: Mapped code system: SNOMED CT (44523008)]
+
+- **Procedure Codes**: 
+
+  - [Kidney biopsy: Mapped code system: CPT (50200)]
+
+- **Medication Codes**: 
+
+  - [ACE inhibitors: Mapped code system: RxNorm (198211)]
+
+  - [Corticosteroids: Mapped code system: RxNorm (5640)]
+
+  - [Immunosuppressants: Mapped code system: RxNorm (20610)]
+ 
+This comprehensive definition of IgA nephropathy includes clinical concepts, symptoms, and diagnostic criteria, along with mapped codes for implementation in a claim database.
+IgA nephropathy--human disease and animal model - PubMed
+IgA nephropathy is one of the most common chronic glomerulonephritides worldwide. Since the first publication on IgA nephropathy, a number of clinical and pathological investigations have revealed ...
+ 

@@ -1,0 +1,37 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix prov: <http://example.org/prov-ontology#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix disease: <http://example.org/ontology/disease#> .
+
+# Biomedical Ontologies
+@prefix doid: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix hp: <http://purl.obolibrary.org/obo/HP_> .
+@prefix mondo: <http://purl.obolibrary.org/obo/MONDO_> .
+@prefix snomed: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+@prefix loinc: <http://purl.bioontology.org/ontology/LNC/> .
+@prefix rxnorm: <http://purl.bioontology.org/ontology/RXNORM/> .
+@prefix icd10: <http://purl.bioontology.org/ontology/ICD10/> .
+@prefix icd9: <http://purl.bioontology.org/ontology/ICD9CM/> .
+@prefix umls: <http://purl.bioontology.org/ontology/UMLS/> .
+@prefix mesh: <http://purl.bioontology.org/ontology/MESH/> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix go: <http://purl.obolibrary.org/obo/GO_> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+
+# OMOP/OHDSI
+@prefix omop: <http://purl.org/ohdsi/omop/> .
+@prefix ohdsi: <http://purl.org/ohdsi/> .
+
+# Default namespace for our cohort model
+@prefix : <http://example.org/cohort/> .
+
+:CohortUnknown rdf:type :Cohort .
+:CohortUnknown :hasClinicalDescription "Prevalence_in_the_United_States___http___example_org_instance_US_Crohns_Prevalence__rdf_type__http___example_org_ontology_PrevalenceData____http___example_org_instance_US_Crohns_Prevalence___http___example_org_ontology_hasPopulation___United_States____http___example_org_instance_US_Crohns_Prevalence___http___example_org_ontology_hasCondition___http___example_org_ontology_CrohnsDisease____http___example_org_instance_US_Crohns_Prevalence___http___example_org_ontology_hasPrevalenceRate___305_cases_per_100_000_people____http___example_org_instance_US_Crohns_Prevalence___http___example_org_ontology_hasNumberAffected___1_01_million_Americans____http___example_org_instance_US_Crohns_Prevalence___http___example_org_ontology_hasStudyYear___2023___Global_Prevalence___http___example_org_instance_Global_Crohns_Prevalence__rdf_type__http___example_org_ontology_PrevalenceData____http___example_org_instance_Global_Crohns_Prevalence___http___example_org_ontology_hasRegions___Western_Europe__North_America____http___example_org_instance_Global_Crohns_Prevalence___http___example_org_ontology_hasCondition___http___example_org_ontology_CrohnsDisease____http___example_org_instance_Global_Crohns_Prevalence___http___example_org_ontology_hasPrevalenceRate___100_to_300_cases_per_100_000_people___IBD_Prevalence_in_the_US___http___example_org_instance_US_IBD_Prevalence__rdf_type__http___example_org_ontology_PrevalenceData____http___example_org_instance_US_IBD_Prevalence___http___example_org_ontology_hasPopulation___United_States____http___example_org_instance_US_IBD_Prevalence___http___example_org_ontology_hasCondition___http___example_org_ontology_InflammatoryBowelDisease____http___example_org_instance_US_IBD_Prevalence___http___example_org_ontology_hasPrevalenceRate___721_cases_per_100_000_person-years___Racial_and_Ethnic_Differences___http___example_org_instance_Racial_IBD_Prevalence__rdf_type__http___example_org_ontology_PrevalenceData____http___example_org_instance_Racial_IBD_Prevalence___http___example_org_ontology_hasCondition___http___example_org_ontology_InflammatoryBowelDisease____http___example_org_instance_Racial_IBD_Prevalence___http___example_org_ontology_hasHigherPrevalenceIn___White_individuals____http___example_org_instance_Racial_IBD_Prevalence___http___example_org_ontology_hasLowerPrevalenceIn___Black__Hispanic__Asian_individuals___Age_and_Gender_Differences___http___example_org_instance_AgeGender_IBD_Prevalence__rdf_type__http___example_org_ontology_PrevalenceData____http___example_org_instance_AgeGender_IBD_Prevalence___http___example_org_ontology_hasCondition___http___example_org_ontology_InflammatoryBowelDisease____http___example_org_instance_AgeGender_IBD_Prevalence___http___example_org_ontology_hasAgeTrend___Increases_in_early_adulthood__decreases_after_age_80____http___example_org_instance_AgeGender_IBD_Prevalence___http___example_org_ontology_hasGenderDistribution___Equally_distributed_between_men_and_women__" .

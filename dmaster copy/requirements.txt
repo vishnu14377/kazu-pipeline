@@ -1,0 +1,7 @@
+owlready2>=0.37
+rdflib>=6.3.2
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.1.0
+networkx>=3.1

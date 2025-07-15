@@ -1,0 +1,93 @@
+
+{
+  "classes": [
+    {
+      "id": "disease:Disease",
+      "label": "Disease",
+      "subClassOf": []
+    },
+    {
+      "id": "disease:InflammatoryBowelDisease",
+      "label": "Inflammatory Bowel Disease",
+      "subClassOf": ["disease:Disease"]
+    },
+    {
+      "id": "disease:ChronicInflammation",
+      "label": "Chronic Inflammation",
+      "subClassOf": []
+    },
+    {
+      "id": "disease:AnatomicalSite",
+      "label": "Anatomical Site",
+      "subClassOf": []
+    },
+    {
+      "id": "disease:IntestinalTract",
+      "label": "Intestinal Tract",
+      "subClassOf": ["disease:AnatomicalSite"]
+    },
+    {
+      "id": "disease:Mesentery",
+      "label": "Mesentery",
+      "subClassOf": ["disease:AnatomicalSite"]
+    },
+    {
+      "id": "disease:RegionalLymphNodes",
+      "label": "Regional Lymph Nodes",
+      "subClassOf": ["disease:AnatomicalSite"]
+    },
+    {
+      "id": "disease:Phenotype",
+      "label": "Phenotype",
+      "subClassOf": []
+    },
+    {
+      "id": "disease:DiscontinuousInvolvement",
+      "label": "Discontinuous Involvement",
+      "subClassOf": ["disease:Phenotype"]
+    },
+    {
+      "id": "disease:SkipLesionPattern",
+      "label": "Skip Lesion Pattern",
+      "subClassOf": ["disease:Phenotype"]
+    },
+    {
+      "id": "disease:RiskFactor",
+      "label": "Risk Factor",
+      "subClassOf": []
+    },
+    {
+      "id": "disease:Smoking",
+      "label": "Smoking",
+      "subClassOf": ["disease:RiskFactor"]
+    },
+    {
+      "id": "disease:Diet",
+      "label": "Diet",
+      "subClassOf": ["disease:RiskFactor"]
+    },
+    {
+      "id": "disease:GeneticVariant",
+      "label": "Genetic Variant",
+      "subClassOf": ["disease:RiskFactor"]
+    }
+  ],
+  "semantic_domains": [
+    {
+      "name": "Disease",
+      "classes": ["disease:Disease", "disease:InflammatoryBowelDisease"]
+    },
+    {
+      "name": "Anatomy",
+      "classes": ["disease:AnatomicalSite", "disease:IntestinalTract", "disease:Mesentery", "disease:RegionalLymphNodes"]
+    },
+    {
+      "name": "Phenotype",
+      "classes": ["disease:Phenotype", "disease:DiscontinuousInvolvement", "disease:SkipLesionPattern"]
+    },
+    {
+      "name": "RiskFactor",
+      "classes": ["disease:RiskFactor", "disease:Smoking", "disease:Diet", "disease:GeneticVariant"]
+    }
+  ]
+}

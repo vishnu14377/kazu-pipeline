@@ -1,0 +1,96 @@
+Crohn's Disease:
+ 
+# Crohn's Disease Definition
+ 
+## Step 1: Disease Overview
+ 
+### General Considerations
+ 
+- **Prevalence and Incidence**:
+
+  - Crohn's disease prevalence varies globally. In Turkey's Western Blacksea region, it is 12.53 per 105 individuals, while in Gijón, Spain, it is 116.47 per 100,000 inhabitants. In Manitoba, Canada, the incidence rate is 15.6 per 100,000 [Source 1 - Pubmed: [29695147](http://www.ncbi.nlm.nih.gov/pubmed/29695147), [11002532](http://www.ncbi.nlm.nih.gov/pubmed/11002532), [11495856](http://www.ncbi.nlm.nih.gov/pubmed/11495856)].
+ 
+- **Affected Areas**:
+
+  - Crohn's disease affects the intestinal tract, causing chronic inflammation [Source 1 - Pubmed: [26339135](http://www.ncbi.nlm.nih.gov/pubmed/26339135)].
+ 
+- **Severity**:
+
+  - Severity varies and does not correlate with family history. It can lead to significant health challenges and complications [Source 1 - Pubmed: [9862832](http://www.ncbi.nlm.nih.gov/pubmed/9862832)].
+ 
+- **Subtypes**:
+
+  - Two subpopulations exist, differing in severity, smoking associations, genetic transmission, and drug response [Source 1 - Pubmed: [33836648](http://www.ncbi.nlm.nih.gov/pubmed/33836648)].
+ 
+- **Molecular Mechanisms**:
+
+  - Imbalance of intestinal microbiota is a key factor [Source 1 - Pubmed: [26339135](http://www.ncbi.nlm.nih.gov/pubmed/26339135)].
+ 
+- **Common Treatments**:
+
+  - Biological therapies, especially anti-TNF drugs, are effective. Migration inhibitors and new cytokine blockers are promising alternatives [Source 1 - Pubmed: [26339135](http://www.ncbi.nlm.nih.gov/pubmed/26339135)].
+ 
+- **Health Economics**:
+
+  - QALY assumptions are challenged by disease-specific equivalence values, especially with anti-TNF and corticosteroid treatments [Source 1 - Pubmed: [31198186](http://www.ncbi.nlm.nih.gov/pubmed/31198186)].
+ 
+## Step 2: Disease Symptoms
+ 
+### General Considerations
+ 
+- **Key Signs, Symptoms, and Clinical Findings**:
+
+  - Symptoms include abdominal pain, bowel pattern changes, abdominal mass, and perianal lesions [Source 2 - Pubmed: [16491064](http://www.ncbi.nlm.nih.gov/pubmed/16491064)].
+ 
+- **Relevant Laboratory Values and Diagnostic Tests**:
+
+  - C-reactive protein and fecal calprotectin levels are significant. Histology provides exact diagnosis [Source 2 - Pubmed: [27312194](http://www.ncbi.nlm.nih.gov/pubmed/27312194), [1475113](http://www.ncbi.nlm.nih.gov/pubmed/1475113)].
+ 
+- **Severity and Progression Stages**:
+
+  - Severity is assessed through laboratory investigations, endoscopy, radiology, and histology [Source 2 - Pubmed: [7170209](http://www.ncbi.nlm.nih.gov/pubmed/7170209)].
+ 
+- **Comorbidities and Differential Diagnoses**:
+
+  - Somatization predicts disease activity. Differential diagnoses include ulcerative colitis and irritable bowel syndrome [Source 2 - Pubmed: [32242466](http://www.ncbi.nlm.nih.gov/pubmed/32242466), [26027601](http://www.ncbi.nlm.nih.gov/pubmed/26027601)].
+ 
+- **Demographic and Pathological Factors**:
+
+  - Young age and ileum site predict stenosis. Smoking and disease duration predict surgery [Source 2 - Pubmed: [17294896](http://www.ncbi.nlm.nih.gov/pubmed/17294896), [25325683](http://www.ncbi.nlm.nih.gov/pubmed/25325683)].
+ 
+## Step 3: Disease Definition
+ 
+### General Considerations
+ 
+- **Phenotype of Interest**:
+
+  - Defined by Montreal and Vienna classifications, serotype patterns, and surgical outcomes [Source 3 - Pubmed: [21033230](http://www.ncbi.nlm.nih.gov/pubmed/21033230), [10457337](http://www.ncbi.nlm.nih.gov/pubmed/10457337), [17074153](http://www.ncbi.nlm.nih.gov/pubmed/17074153)].
+ 
+- **Clinical Relevance and Research Objectives**:
+
+  - Classification systems aid in treatment regimens and surgical outcome predictions [Source 3 - Pubmed: [21033230](http://www.ncbi.nlm.nih.gov/pubmed/21033230), [10457337](http://www.ncbi.nlm.nih.gov/pubmed/10457337)].
+ 
+- **Clinical Presentations, Variations, and Subtypes**:
+
+  - Presentation varies by digestive tract segments and disease aggressiveness. Ethnic variations noted [Source 3 - Pubmed: [12122731](http://www.ncbi.nlm.nih.gov/pubmed/12122731), [31599507](http://www.ncbi.nlm.nih.gov/pubmed/31599507)].
+ 
+- **Pathophysiology and Mechanisms**:
+
+  - Disease course patterns include remission, stable disease, chronic relapsing, and chronic refractory disease [Source 3 - Pubmed: [34456186](http://www.ncbi.nlm.nih.gov/pubmed/34456186)].
+ 
+## Step 4: Disease Code Lists
+ 
+### General Considerations
+ 
+- **Diagnosis Codes**:
+
+  - ICD-9 code 555 is commonly used, but combining with procedure codes improves accuracy [Source 4 - Pubmed: [12226679](http://www.ncbi.nlm.nih.gov/pubmed/12226679), [32518662](http://www.ncbi.nlm.nih.gov/pubmed/32518662)].
+ 
+- **Laboratory and Imaging Results**:
+
+  - Codes should be integrated with diagnostic procedures for accuracy [Source 4 - Pubmed: [24817338](http://www.ncbi.nlm.nih.gov/pubmed/24817338)].
+ 
+This comprehensive definition of Crohn's Disease provides the necessary details for implementation in a claim database, ensuring accurate identification and management of the disease.
+Epidemiologic features of ınflammatory bowel disease in Western Blacksea region of Turkey for the last 10 years: retrospective cohort study - PubMed
+The incidence of inflammatory bowel disease seems to increase in Western Blacksea region at the last 10 years. This increment is more prevalent in rural areas.
+ 

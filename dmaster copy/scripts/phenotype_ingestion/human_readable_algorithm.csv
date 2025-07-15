@@ -1,0 +1,6 @@
+cohort_id,section,content,provenance_agent,provenance_source,provenance_timestamp
+10616,"algorithm_description","Earliest occurrence of Crohn's disease indexed on diagnosis date, for the first time in history; cohort exit is the end of continuous observation.","PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,"inclusion_criteria","Included: All occurrences of Crohn's disease (SNOMED CT: 201606) and its descendants.","PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,"exclusion_criteria","Excluded: None specified.","PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,"temporal_constraints","Time window: 31-365 days after index for second diagnosis code.","PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,"validation_notes","Validated across 11 databases. Specificity improved with second diagnosis code requirement, but sensitivity loss precluded use in ASSURE.","PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z" 

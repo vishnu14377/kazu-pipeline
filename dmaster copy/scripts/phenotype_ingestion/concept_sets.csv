@@ -1,0 +1,8 @@
+cohort_id,concept_id,concept_name,vocabulary_id,include_descendants,is_excluded,include_mapped,is_main_concept,provenance_agent,provenance_source,provenance_timestamp
+10616,46269889,"Complication due to Crohn's disease","SNOMED",TRUE,FALSE,FALSE,TRUE,"PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,201606,"Crohn's disease","SNOMED",TRUE,FALSE,FALSE,TRUE,"PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,4340812,"Perianal Crohn's disease","SNOMED",TRUE,FALSE,FALSE,TRUE,"PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,46269888,"Abscess of intestine co-occurrent and due to Crohn's disease","SNOMED",TRUE,FALSE,FALSE,FALSE,"PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,46274073,"Abscess of intestine co-occurrent and due to Crohn's disease of large intestine","SNOMED",TRUE,FALSE,FALSE,FALSE,"PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,46269878,"Abscess of intestine co-occurrent and due to Crohn's disease of small and large intestine","SNOMED",TRUE,FALSE,FALSE,FALSE,"PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z"
+10616,46269883,"Abscess of intestine co-occurrent and due to Crohn's disease of small intestine","SNOMED",TRUE,FALSE,FALSE,FALSE,"PhenotypeIngestionAgent","PhenotypeLibrary","2024-03-19T00:00:00Z" 

@@ -1,0 +1,45 @@
+vocabularies:
+  SNOMED: 'snomed:'
+  LOINC: 'loinc:'
+  RxNorm: 'rxnorm:'
+  ICD10: 'icd10:'
+  ICD9CM: 'icd9:'
+  UMLS: 'umls:'
+  MeSH: 'mesh:'
+  DOID: 'doid:'
+  HPO: 'hp:'
+  MONDO: 'mondo:'
+
+extraction_patterns:
+  - name: "Inflammation Characteristic"
+    predicate: "disease:hasInflammationCharacteristic"
+    patterns:
+      - "characterized by (?P<value>.+?)\n"
+      - "inflammation of the (?P<value>.+?)\n"
+
+  - name: "Anatomical Site"
+    predicate: "disease:affectsAnatomicalSite"
+    patterns:
+      - "located in the (?P<value>.+?)\n"
+      - "affects the (?P<value>.+?)\n"
+
+  - name: "Age of Onset"
+    predicate: "disease:hasTypicalAgeOfOnset"
+    patterns:
+      - "age.*?(\\d+)"
+
+  - name: "Incidence Rate"
+    predicate: "disease:hasIncidence"
+    patterns:
+      - "(\\d+\\.?\\d*)-(\\d+\\.?\\d*) cases[ _]per[ _]100,000[ _]py"
+
+  - name: "Prevalence Rate"
+    predicate: "disease:hasPrevalence"
+    patterns:
+      - "(\\d+) cases[ _]per[ _]100,000[ _]persons"
+      - "(\\d+) to (\\d+) per[ _]100,000[ _]people"
+
+  - name: "Risk Factor"
+    predicate: "disease:hasRiskFactor"
+    patterns:
+      - "Risk[ _]factors[ _]include (?P<value>.+?)\n"
