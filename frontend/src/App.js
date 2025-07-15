@@ -11,55 +11,92 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
+      <div style={{ minHeight: '100vh', backgroundColor: '#f9fafb' }}>
         {/* Navigation */}
-        <nav className="bg-white shadow-lg">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between h-16">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <h1 className="text-2xl font-bold text-blue-600">dMaster</h1>
-                  <p className="text-sm text-gray-500">Disease Mastery Ontology System</p>
+        <nav style={{ 
+          backgroundColor: 'white', 
+          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)', 
+          borderBottom: '1px solid #e5e7eb' 
+        }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 16px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', height: '64px' }}>
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div>
+                  <h1 style={{ 
+                    fontSize: '24px', 
+                    fontWeight: 'bold', 
+                    color: '#2563eb', 
+                    margin: 0 
+                  }}>
+                    dMaster
+                  </h1>
+                  <p style={{ 
+                    fontSize: '14px', 
+                    color: '#6b7280', 
+                    margin: 0 
+                  }}>
+                    Disease Mastery Ontology System
+                  </p>
                 </div>
               </div>
-              <div className="flex items-center space-x-4">
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <button
                   onClick={() => setCurrentPage('dashboard')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium ${
-                    currentPage === 'dashboard'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                  style={{
+                    padding: '8px 16px',
+                    borderRadius: '6px',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    border: 'none',
+                    cursor: 'pointer',
+                    backgroundColor: currentPage === 'dashboard' ? '#dbeafe' : 'transparent',
+                    color: currentPage === 'dashboard' ? '#1d4ed8' : '#6b7280'
+                  }}
                 >
                   Dashboard
                 </button>
                 <button
                   onClick={() => setCurrentPage('ontologies')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium ${
-                    currentPage === 'ontologies'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                  style={{
+                    padding: '8px 16px',
+                    borderRadius: '6px',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    border: 'none',
+                    cursor: 'pointer',
+                    backgroundColor: currentPage === 'ontologies' ? '#dbeafe' : 'transparent',
+                    color: currentPage === 'ontologies' ? '#1d4ed8' : '#6b7280'
+                  }}
                 >
                   Ontologies
                 </button>
                 <button
                   onClick={() => setCurrentPage('validation')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium ${
-                    currentPage === 'validation'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                  style={{
+                    padding: '8px 16px',
+                    borderRadius: '6px',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    border: 'none',
+                    cursor: 'pointer',
+                    backgroundColor: currentPage === 'validation' ? '#dbeafe' : 'transparent',
+                    color: currentPage === 'validation' ? '#1d4ed8' : '#6b7280'
+                  }}
                 >
                   Validation
                 </button>
                 <button
                   onClick={() => setCurrentPage('stats')}
-                  className={`px-4 py-2 rounded-md text-sm font-medium ${
-                    currentPage === 'stats'
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-500 hover:text-gray-700'
-                  }`}
+                  style={{
+                    padding: '8px 16px',
+                    borderRadius: '6px',
+                    fontSize: '14px',
+                    fontWeight: '500',
+                    border: 'none',
+                    cursor: 'pointer',
+                    backgroundColor: currentPage === 'stats' ? '#dbeafe' : 'transparent',
+                    color: currentPage === 'stats' ? '#1d4ed8' : '#6b7280'
+                  }}
                 >
                   Statistics
                 </button>
@@ -69,7 +106,7 @@ function App() {
         </nav>
 
         {/* Main Content */}
-        <main className="max-w-7xl mx-auto py-6 px-4">
+        <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '24px 16px' }}>
           {currentPage === 'dashboard' && <Dashboard />}
           {currentPage === 'ontologies' && <OntologyManager />}
           {currentPage === 'validation' && <ValidationTools />}
