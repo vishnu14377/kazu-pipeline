@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://example.org/main-ontology#> .
+
+:MainOntology rdf:type owl:Ontology ;
+    rdfs:label "Main Ontology" .
+
+:has_entry_criterion rdf:type owl:ObjectProperty ;
+    rdfs:label "has entry criterion"@en ;
+    rdfs:domain :Cohort_Definition ;
+    rdfs:range <http://example.org/diagnosis-ontology#DiagnosisAssertion> .
+
+:has_exit_criterion rdf:type owl:ObjectProperty ;
+    rdfs:label "has exit criterion"@en ;
+    rdfs:domain :Cohort_Definition ;
+    rdfs:range <http://example.org/diagnosis-ontology#DiagnosisAssertion> .
+
+:Cohort_Definition rdf:type owl:Class ;
+    rdfs:label "Cohort Definition"@en .
+
+:has_phenotype rdf:type owl:ObjectProperty ;
+    rdfs:label "has phenotype"@en ;
+    rdfs:domain <http://example.org/disease-ontology#Disease> ;
+    rdfs:range <http://example.org/phenotype-ontology#Phenotype> .

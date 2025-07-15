@@ -1,0 +1,333 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix prov: <http://example.org/prov-ontology#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix disease: <http://example.org/ontology/disease#> .
+
+# Biomedical Ontologies
+@prefix doid: <http://purl.obolibrary.org/obo/DOID_> .
+@prefix hp: <http://purl.obolibrary.org/obo/HP_> .
+@prefix mondo: <http://purl.obolibrary.org/obo/MONDO_> .
+@prefix snomed: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
+@prefix loinc: <http://purl.bioontology.org/ontology/LNC/> .
+@prefix rxnorm: <http://purl.bioontology.org/ontology/RXNORM/> .
+@prefix icd10: <http://purl.bioontology.org/ontology/ICD10/> .
+@prefix icd9: <http://purl.bioontology.org/ontology/ICD9CM/> .
+@prefix umls: <http://purl.bioontology.org/ontology/UMLS/> .
+@prefix mesh: <http://purl.bioontology.org/ontology/MESH/> .
+@prefix chebi: <http://purl.obolibrary.org/obo/CHEBI_> .
+@prefix go: <http://purl.obolibrary.org/obo/GO_> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+
+# OMOP/OHDSI
+@prefix omop: <http://purl.org/ohdsi/omop/> .
+@prefix ohdsi: <http://purl.org/ohdsi/> .
+
+# Default namespace for our cohort model
+@prefix : <http://example.org/cohort/> .
+
+:Cohort12400 rdf:type :Cohort .
+:Cohort12400 rdfs:label "[PL] Earliest event of Atrial Fibrillation" .
+:Cohort12400 dct:identifier "12400"^^xsd:integer .
+:Cohort12400 dct:source <https://epi.jnj.com/atlas/#/cohortdefinition/12400> .
+:AtlasAgent rdf:type prov:Agent .
+:AtlasAgent rdfs:label "OHDSI Atlas" .
+:AtlasActivity_12400 rdf:type prov:Activity .
+:AtlasActivity_12400 rdfs:label "Atlas Cohort Definition Activity" .
+:Cohort12400 prov:wasGeneratedBy :AtlasActivity_12400 .
+:AtlasActivity_12400 prov:wasAssociatedWith :AtlasAgent .
+:Cohort12400 :hasEvaluationSummary "We developed an incident cohort definition for AF using a concept set of 1 concept which incorporated all those found from the literature review, the analysis of PHOEBE, and orphan concepts in cohort diagnostics. The algorithm retrieves subjects from 11 databases tested. We also developed a more specific cohort requiring at least one additional diagnosis code for AF within 1 year of the index date, given the possibility of the single-code incident cohort including some rule-out diagnoses relating to other arrhythmias. Using the more specific cohort only slightly improves the specificity and PPV of the algorithm albeit at the expense of sensitivity as determined by PheValuator. It should be noted that there is a drastic reduction in sensitivity (16-53%) when using the more specific cohort. Furthermore, the very high sensitivity values while maintaining relatively high PPV and specificity using the single-code incident cohort outperform several of the more specific AF definitions in the literature review, which supports its use even further. In the end, the indication phenotype team considered the single-code incident cohort definition using one AF diagnosis code to have sufficient performance for the ASSURE platform" .
+:ValidationActivity_Cohort12400 rdf:type prov:Activity .
+:ValidationActivity_Cohort12400 rdfs:label "Cohort Validation Activity" .
+:Cohort12400 prov:wasGeneratedBy :ValidationActivity_Cohort12400 .
+:Cohort12400 :hasCohortType "incident" .
+:DevelopmentActivity_Cohort12400 rdf:type prov:Activity .
+:DevelopmentActivity_Cohort12400 rdfs:label "Cohort Development Activity" .
+:Cohort12400 prov:wasGeneratedBy :DevelopmentActivity_Cohort12400 .
+:Cohort12400 :hasPerformanceMetrics :SpecificityAndSensitivity .
+:PerformanceActivity_Cohort12400 rdf:type prov:Activity .
+:PerformanceActivity_Cohort12400 rdfs:label "Performance Evaluation Activity" .
+:Cohort12400 prov:wasGeneratedBy :PerformanceActivity_Cohort12400 .
+:Cohort12400 :validatedBy :PheValuator .
+:PheValuatorAgent rdf:type prov:Agent .
+:PheValuatorAgent rdfs:label "PheValuator Validation Tool" .
+:ValidationActivity_Cohort12400 prov:wasAssociatedWith :PheValuatorAgent .
+:AlgorithmActivity_Cohort12400 rdf:type prov:Activity .
+:AlgorithmActivity_Cohort12400 rdfs:label "Cohort Algorithm Development" .
+:Cohort12400 prov:wasGeneratedBy :AlgorithmActivity_Cohort12400 .
+:Cohort12400 :hasAlgorithm "### Cohort Entry Events
+
+People enter the cohort when observing any of the following:
+
+1. condition occurrence of '[ASSURE] Atrial fibrillation' for the first time in the person's history.
+
+Limit cohort entry events to the earliest event per person.
+
+### Cohort Exit
+
+The person exits the cohort at the end of continuous observation.
+
+### Cohort Eras
+
+Remaining events will be combined into cohort eras if they are within 0 days of each other.
+
+" .
+:EntryEventActivity_Cohort12400 rdf:type prov:Activity .
+:EntryEventActivity_Cohort12400 rdfs:label "Entry Event Definition" .
+:AlgorithmActivity_Cohort12400 prov:wasDerivedFrom :EntryEventActivity_Cohort12400 .
+:EntryCondition_Cohort12400_1 rdf:type :EntryCondition .
+:EntryCondition_Cohort12400_1 rdfs:label "[ASSURE] Atrial fibrillation" .
+:EntryEventActivity_Cohort12400 :definesCondition :EntryCondition_Cohort12400_1 .
+:EntryEventActivity_Cohort12400 :hasTimeConstraint :FirstOccurrence .
+:FirstOccurrence rdf:type :TimeConstraint .
+:FirstOccurrence rdfs:label "First occurrence in history" .
+:EntryEventActivity_Cohort12400 :hasEventLimit :EarliestEvent .
+:EarliestEvent rdf:type :EventLimit .
+:EarliestEvent rdfs:label "Earliest event per person" .
+:ExitCriteriaActivity_Cohort12400 rdf:type prov:Activity .
+:ExitCriteriaActivity_Cohort12400 rdfs:label "Exit Criteria Definition" .
+:AlgorithmActivity_Cohort12400 prov:wasDerivedFrom :ExitCriteriaActivity_Cohort12400 .
+:ExitCriteriaActivity_Cohort12400 :hasExitCriteria :EndOfObservation .
+:EndOfObservation rdf:type :ExitCriteria .
+:EndOfObservation rdfs:label "End of continuous observation" .
+:EraDefinitionActivity_Cohort12400 rdf:type prov:Activity .
+:EraDefinitionActivity_Cohort12400 rdfs:label "Cohort Era Definition" .
+:AlgorithmActivity_Cohort12400 prov:wasDerivedFrom :EraDefinitionActivity_Cohort12400 .
+:EraDefinitionActivity_Cohort12400 :hasEraWindow "0"^^xsd:integer .
+:EraDefinitionActivity_Cohort12400 :hasEraWindowUnit "days" .
+:ConceptSetActivity_Cohort12400 rdf:type prov:Activity .
+:ConceptSetActivity_Cohort12400 rdfs:label "Concept Set Development" .
+:Cohort12400 prov:wasGeneratedBy :ConceptSetActivity_Cohort12400 .
+:LiteratureReviewActivity_Cohort12400 rdf:type prov:Activity .
+:LiteratureReviewActivity_Cohort12400 rdfs:label "Literature Review" .
+:ConceptSetActivity_Cohort12400 prov:wasDerivedFrom :LiteratureReviewActivity_Cohort12400 .
+:PHOEBEAnalysisActivity_Cohort12400 rdf:type prov:Activity .
+:PHOEBEAnalysisActivity_Cohort12400 rdfs:label "PHOEBE Analysis" .
+:ConceptSetActivity_Cohort12400 prov:wasDerivedFrom :PHOEBEAnalysisActivity_Cohort12400 .
+:OrphanConceptActivity_Cohort12400 rdf:type prov:Activity .
+:OrphanConceptActivity_Cohort12400 rdfs:label "Orphan Concept Analysis" .
+:ConceptSetActivity_Cohort12400 prov:wasDerivedFrom :OrphanConceptActivity_Cohort12400 .
+:ConceptSet_3 rdf:type :ConceptSet .
+:ConceptSet_3 rdfs:label "_ASSURE__Atrial_fibrillation" .
+:Cohort12400 :hasConceptSet :ConceptSet_3 .
+:ConceptSetDevActivity_3 rdf:type prov:Activity .
+:ConceptSetDevActivity_3 rdfs:label "Concept Set 3 Development" .
+:ConceptSet_3 prov:wasGeneratedBy :ConceptSetDevActivity_3 .
+:ConceptSetActivity_Cohort12400 prov:wasDerivedFrom :ConceptSetDevActivity_3 .
+snomed:49436004 rdf:type :Concept .
+snomed:49436004 rdfs:label "Atrial_fibrillation" .
+snomed:49436004 :hasConceptCode "49436004" .
+snomed:49436004 :hasDomain "Condition" .
+snomed:49436004 :hasVocabulary "SNOMED" .
+snomed:49436004 :hasConceptClass "Clinical_Finding" .
+:ConceptRule_3_313217 rdf:type :ConceptInclusionRule .
+:ConceptSet_3 :hasInclusionRule :ConceptRule_3_313217 .
+:ConceptRule_3_313217 :appliesToConcept snomed:49436004 .
+:ConceptRule_3_313217 :isExcluded "false"^^xsd:boolean .
+:ConceptRule_3_313217 :includeDescendants "true"^^xsd:boolean .
+:ConceptRule_3_313217 :includeMapped "false"^^xsd:boolean .
+:ConceptRule_3_313217 rdfs:comment "Includes concept in the cohort" .
+:ConceptRule_3_313217 rdfs:comment "Includes all descendant concepts in the hierarchy" .
+snomed:49436004 skos:exactMatch snomed:49436004 .
+snomed:49436004 rdf:type :Concept .
+snomed:49436004 rdfs:label "Atrial_fibrillation" .
+snomed:49436004 :hasConceptCode "49436004" .
+snomed:49436004 :hasDomain "Condition" .
+snomed:49436004 :hasVocabulary "SNOMED" .
+snomed:49436004 :hasConceptClass "Disorder" .
+snomed:49436004 :validFrom "1012435200000"^^xsd:dateTime .
+snomed:49436004 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:49436004 .
+snomed:49436004 skos:exactMatch snomed:49436004 .
+snomed:313377641000119105 rdf:type :Concept .
+snomed:313377641000119105 rdfs:label "Atrial_fibrillation_due_to_heart_valve_disorder" .
+snomed:313377641000119105 :hasConceptCode "313377641000119105" .
+snomed:313377641000119105 :hasDomain "Condition" .
+snomed:313377641000119105 :hasVocabulary "SNOMED" .
+snomed:313377641000119105 :hasConceptClass "Disorder" .
+snomed:313377641000119105 :validFrom "1688083200000"^^xsd:dateTime .
+snomed:313377641000119105 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:313377641000119105 .
+snomed:313377641000119105 skos:exactMatch snomed:313377641000119105 .
+snomed:120041000119109 rdf:type :Concept .
+snomed:120041000119109 rdfs:label "Atrial_fibrillation_with_rapid_ventricular_response" .
+snomed:120041000119109 :hasConceptCode "120041000119109" .
+snomed:120041000119109 :hasDomain "Condition" .
+snomed:120041000119109 :hasVocabulary "SNOMED" .
+snomed:120041000119109 :hasConceptClass "Disorder" .
+snomed:120041000119109 :validFrom "1391126400000"^^xsd:dateTime .
+snomed:120041000119109 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:120041000119109 .
+snomed:120041000119109 skos:exactMatch snomed:120041000119109 .
+snomed:426749004 rdf:type :Concept .
+snomed:426749004 rdfs:label "Chronic_atrial_fibrillation" .
+snomed:426749004 :hasConceptCode "426749004" .
+snomed:426749004 :hasDomain "Condition" .
+snomed:426749004 :hasVocabulary "SNOMED" .
+snomed:426749004 :hasConceptClass "Disorder" .
+snomed:426749004 :validFrom "1185840000000"^^xsd:dateTime .
+snomed:426749004 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:426749004 .
+snomed:426749004 skos:exactMatch snomed:426749004 .
+snomed:300996004 rdf:type :Concept .
+snomed:300996004 rdfs:label "Controlled_atrial_fibrillation" .
+snomed:300996004 :hasConceptCode "300996004" .
+snomed:300996004 :hasDomain "Condition" .
+snomed:300996004 :hasVocabulary "SNOMED" .
+snomed:300996004 :hasConceptClass "Disorder" .
+snomed:300996004 :validFrom "1012435200000"^^xsd:dateTime .
+snomed:300996004 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:300996004 .
+snomed:300996004 skos:exactMatch snomed:300996004 .
+:OMOP5165913 rdf:type :Concept .
+:OMOP5165913 rdfs:label "Exacerbation_of_atrial_fibrillation" .
+:OMOP5165913 :hasConceptCode "OMOP5165913" .
+:OMOP5165913 :hasDomain "Condition" .
+:OMOP5165913 :hasVocabulary "OMOP_Extension" .
+:OMOP5165913 :hasConceptClass "Disorder" .
+:OMOP5165913 :validFrom "1651795200000"^^xsd:dateTime .
+:OMOP5165913 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept :OMOP5165913 .
+snomed:715395008 rdf:type :Concept .
+snomed:715395008 rdfs:label "Familial_atrial_fibrillation" .
+snomed:715395008 :hasConceptCode "715395008" .
+snomed:715395008 :hasDomain "Condition" .
+snomed:715395008 :hasVocabulary "SNOMED" .
+snomed:715395008 :hasConceptClass "Disorder" .
+snomed:715395008 :validFrom "1469923200000"^^xsd:dateTime .
+snomed:715395008 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:715395008 .
+snomed:715395008 skos:exactMatch snomed:715395008 .
+snomed:233910005 rdf:type :Concept .
+snomed:233910005 rdfs:label "Lone_atrial_fibrillation" .
+snomed:233910005 :hasConceptCode "233910005" .
+snomed:233910005 :hasDomain "Condition" .
+snomed:233910005 :hasVocabulary "SNOMED" .
+snomed:233910005 :hasConceptClass "Disorder" .
+snomed:233910005 :validFrom "1012435200000"^^xsd:dateTime .
+snomed:233910005 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:233910005 .
+snomed:233910005 skos:exactMatch snomed:233910005 .
+snomed:706923002 rdf:type :Concept .
+snomed:706923002 rdfs:label "Longstanding_persistent_atrial_fibrillation" .
+snomed:706923002 :hasConceptCode "706923002" .
+snomed:706923002 :hasDomain "Condition" .
+snomed:706923002 :hasVocabulary "SNOMED" .
+snomed:706923002 :hasConceptClass "Disorder" .
+snomed:706923002 :validFrom "1422662400000"^^xsd:dateTime .
+snomed:706923002 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:706923002 .
+snomed:706923002 skos:exactMatch snomed:706923002 .
+snomed:233911009 rdf:type :Concept .
+snomed:233911009 rdfs:label "Non-rheumatic_atrial_fibrillation" .
+snomed:233911009 :hasConceptCode "233911009" .
+snomed:233911009 :hasDomain "Condition" .
+snomed:233911009 :hasVocabulary "SNOMED" .
+snomed:233911009 :hasConceptClass "Disorder" .
+snomed:233911009 :validFrom "1012435200000"^^xsd:dateTime .
+snomed:233911009 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:233911009 .
+snomed:233911009 skos:exactMatch snomed:233911009 .
+snomed:282825002 rdf:type :Concept .
+snomed:282825002 rdfs:label "Paroxysmal_atrial_fibrillation" .
+snomed:282825002 :hasConceptCode "282825002" .
+snomed:282825002 :hasDomain "Condition" .
+snomed:282825002 :hasVocabulary "SNOMED" .
+snomed:282825002 :hasConceptClass "Disorder" .
+snomed:282825002 :validFrom "1012435200000"^^xsd:dateTime .
+snomed:282825002 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:282825002 .
+snomed:282825002 skos:exactMatch snomed:282825002 .
+snomed:467643831000119105 rdf:type :Concept .
+snomed:467643831000119105 rdfs:label "Paroxysmal_atrial_fibrillation_due_to_heart_valve_disorder" .
+snomed:467643831000119105 :hasConceptCode "467643831000119105" .
+snomed:467643831000119105 :hasDomain "Condition" .
+snomed:467643831000119105 :hasVocabulary "SNOMED" .
+snomed:467643831000119105 :hasConceptClass "Disorder" .
+snomed:467643831000119105 :validFrom "1688083200000"^^xsd:dateTime .
+snomed:467643831000119105 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:467643831000119105 .
+snomed:467643831000119105 skos:exactMatch snomed:467643831000119105 .
+snomed:1010405004 rdf:type :Concept .
+snomed:1010405004 rdfs:label "Paroxysmal_atrial_fibrillation_with_rapid_ventricular_response" .
+snomed:1010405004 :hasConceptCode "1010405004" .
+snomed:1010405004 :hasDomain "Condition" .
+snomed:1010405004 :hasVocabulary "SNOMED" .
+snomed:1010405004 :hasConceptClass "Disorder" .
+snomed:1010405004 :validFrom "1612051200000"^^xsd:dateTime .
+snomed:1010405004 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:1010405004 .
+snomed:1010405004 skos:exactMatch snomed:1010405004 .
+snomed:440028005 rdf:type :Concept .
+snomed:440028005 rdfs:label "Permanent_atrial_fibrillation" .
+snomed:440028005 :hasConceptCode "440028005" .
+snomed:440028005 :hasDomain "Condition" .
+snomed:440028005 :hasVocabulary "SNOMED" .
+snomed:440028005 :hasConceptClass "Disorder" .
+snomed:440028005 :validFrom "1233360000000"^^xsd:dateTime .
+snomed:440028005 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:440028005 .
+snomed:440028005 skos:exactMatch snomed:440028005 .
+snomed:280797561000119107 rdf:type :Concept .
+snomed:280797561000119107 rdfs:label "Permanent_atrial_fibrillation_due_to_heart_valve_disorder" .
+snomed:280797561000119107 :hasConceptCode "280797561000119107" .
+snomed:280797561000119107 :hasDomain "Condition" .
+snomed:280797561000119107 :hasVocabulary "SNOMED" .
+snomed:280797561000119107 :hasConceptClass "Disorder" .
+snomed:280797561000119107 :validFrom "1688083200000"^^xsd:dateTime .
+snomed:280797561000119107 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:280797561000119107 .
+snomed:280797561000119107 skos:exactMatch snomed:280797561000119107 .
+snomed:440059007 rdf:type :Concept .
+snomed:440059007 rdfs:label "Persistent_atrial_fibrillation" .
+snomed:440059007 :hasConceptCode "440059007" .
+snomed:440059007 :hasDomain "Condition" .
+snomed:440059007 :hasVocabulary "SNOMED" .
+snomed:440059007 :hasConceptClass "Disorder" .
+snomed:440059007 :validFrom "1233360000000"^^xsd:dateTime .
+snomed:440059007 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:440059007 .
+snomed:440059007 skos:exactMatch snomed:440059007 .
+snomed:489609371000119104 rdf:type :Concept .
+snomed:489609371000119104 rdfs:label "Persistent_atrial_fibrillation_due_to_heart_valve_disorder" .
+snomed:489609371000119104 :hasConceptCode "489609371000119104" .
+snomed:489609371000119104 :hasDomain "Condition" .
+snomed:489609371000119104 :hasVocabulary "SNOMED" .
+snomed:489609371000119104 :hasConceptClass "Disorder" .
+snomed:489609371000119104 :validFrom "1688083200000"^^xsd:dateTime .
+snomed:489609371000119104 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:489609371000119104 .
+snomed:489609371000119104 skos:exactMatch snomed:489609371000119104 .
+snomed:762247006 rdf:type :Concept .
+snomed:762247006 rdfs:label "Preexcited_atrial_fibrillation" .
+snomed:762247006 :hasConceptCode "762247006" .
+snomed:762247006 :hasDomain "Condition" .
+snomed:762247006 :hasVocabulary "SNOMED" .
+snomed:762247006 :hasConceptClass "Disorder" .
+snomed:762247006 :validFrom "1517356800000"^^xsd:dateTime .
+snomed:762247006 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:762247006 .
+snomed:762247006 skos:exactMatch snomed:762247006 .
+snomed:314208002 rdf:type :Concept .
+snomed:314208002 rdfs:label "Rapid_atrial_fibrillation" .
+snomed:314208002 :hasConceptCode "314208002" .
+snomed:314208002 :hasDomain "Condition" .
+snomed:314208002 :hasVocabulary "SNOMED" .
+snomed:314208002 :hasConceptClass "Disorder" .
+snomed:314208002 :validFrom "1012435200000"^^xsd:dateTime .
+snomed:314208002 :validTo "4102358400000"^^xsd:dateTime .
+:ConceptSet_3 :hasResolvedConcept snomed:314208002 .
+snomed:314208002 skos:exactMatch snomed:314208002 .
+:Disease_Atrial_Fibrillation rdf:type :Disease .
+:Disease_Atrial_Fibrillation rdfs:label "Atrial Fibrillation" .
+:Cohort12400 :hasDisease :Disease_Atrial_Fibrillation .
+:Temporal_Earliest_event rdf:type time:TemporalEntity .
+:Temporal_Earliest_event rdfs:label "Earliest event" .
+:Cohort12400 :hasTemporalConstraint :Temporal_Earliest_event .

@@ -1,0 +1,49 @@
+@prefix clinical: <http://example.org/clinical-ontology#> .
+@prefix diagnosis: <http://example.org/diagnosis-ontology#> .
+@prefix disease: <http://example.org/disease-ontology#> .
+@prefix metadata: <http://example.org/metadata-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pathogenesis: <http://example.org/pathogenesis-ontology#> .
+@prefix phenotype: <http://example.org/phenotype-ontology#> .
+@prefix population: <http://example.org/population-ontology#> .
+@prefix prov1: <http://example.org/prov-ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix treatment: <http://example.org/treatment-ontology#> .
+
+clinical:Clinical a owl:Class ;
+    rdfs:label "Clinical" .
+
+diagnosis:diagnoses a owl:ObjectProperty ;
+    rdfs:label "diagnoses"@en ;
+    rdfs:domain diagnosis:DiagnosisAssertion ;
+    rdfs:range disease:Disease .
+
+diagnosis:hasEntryCriterion a owl:ObjectProperty ;
+    rdfs:label "has entry criterion"@en ;
+    rdfs:domain <http://example.org/main-ontology#Cohort_Definition> ;
+    rdfs:range diagnosis:DiagnosisAssertion .
+
+metadata:Metadata a owl:Class ;
+    rdfs:label "Metadata" .
+
+pathogenesis:DiseaseStage a owl:Class ;
+    rdfs:label "DiseaseStage" .
+
+phenotype:Phenotype a owl:Class ;
+    rdfs:label "Phenotype" .
+
+population:Patient a owl:Class ;
+    rdfs:label "Patient" .
+
+prov1:Prov a owl:Class ;
+    rdfs:label "Provenance" .
+
+treatment:Treatment a owl:Class ;
+    rdfs:label "Treatment" .
+
+disease:Disease a owl:Class ;
+    rdfs:label "Disease" .
+
+diagnosis:DiagnosisAssertion a owl:Class ;
+    rdfs:label "Diagnosis Assertion"@en .
+
